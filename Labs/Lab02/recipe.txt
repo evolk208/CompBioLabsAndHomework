@@ -1,5 +1,5 @@
 Betty Crocker Oatmeal-Chocolate Chip Cookies Recipe 
-
+# Taken from https://www.bettycrocker.com/recipes/oatmeal-chocolate-chip-cookies/48acadc3-f7e1-46b5-bb33-33bee95f6cf7 on January 24, 2019.
 Notes: Super delicious cookie recipe! Granulated sugar made cookies potentially too sweet.
 
 Ingredients: 
