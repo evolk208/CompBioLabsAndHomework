@@ -131,3 +131,33 @@ for(i in 2:findTime) {
 # Plot the results
 plot(time, abundance)
 # ====
+# ==============================
+# Part 3: Optional challenge problems 
+# ==============================
+# 8. Obtain the data and metadata files in the Lab04 folder on Sam's GitHub site for the class. Data file = "CO2_data_cut_paste.csv" Meta-data: "MetaData_CO2_emissions.txt." Copy into this dir and then do the following: 
+
+# 8a. Read the data into RStudio
+getwd()
+carbonData <- read.csv("CO2_data_cut_paste.csv")
+# Inspect the data 
+head(carbonData, 1)
+summary(carbonData)
+str(carbonData)
+
+# 8b. R imported each column of this data as "ints" rather than "numeric" data types. This is a proglem for calculations, as integer math treats values as categorical rather than continuous. Convert to numeric, either through a read.csv() option to force import of type numeric, or iterate through data frame to change column types 
+# Option 1 - in importing, using colClasses option
+?read.csv()
+carbonData <- read.csv("CO2_data_cut_paste.csv", colClasses = "numeric")
+str(carbonData)
+
+# Option 2 - Adjust dataframe after importing
+# One way, using sapply 
+carbonData <- read.csv("CO2_data_cut_paste.csv")
+carbonData <- as.data.frame(sapply(carbonData, as.numeric))
+str(carbonData)
+
+# 8c. For each of the quantities of data, except for Year, calculate the percent change from year i-1 to year i across all years. Store results in a new data frame or matrix with the same headers or column names as the imported data 
+# Note data structure: Each row is a different year sample. Just go by this 
+# Percent change from previous year for all elements: 
+# Getting started: 
+head(as.data.frame(cbind(carbonData[,1], carbonData[2,2:ncol(carbonData)]-carbonData[1,2:ncol(carbonData)])))
