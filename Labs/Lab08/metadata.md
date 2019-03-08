@@ -22,4 +22,4 @@ Where
 This function outputs a data frame of dimensions 2 x numGens, whose fist column lists generations, and second column lists abundance at each generation. Script writes this data to a .csv file. Function also plots abundances along time stamps, though this is not currently saved to file automatically. 
 
 ### Example plot output: 
-![Example plot output]()
+![Example plot output]("example-output.png")
