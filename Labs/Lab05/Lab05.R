@@ -119,6 +119,48 @@ for( i in 2:totalGenerations ) {
 # Plot values over time 
 # Doing a stairstep plot here to give a balance between the discrete points of this model and the general trend line 
 plot(time, n, col="blue", type="s", main="Lotka-Volterra Predator-Prey Model", xlab="Time (year)", ylab="Abundance")
+
 points(time, p, col="brown3", type="s")
-?legend()
+
 legend("topright", legend=c("Prey", "Predator"), col=c("blue", "brown3"), lty=1)
+
+# Create a matrix of results named "myResults". colnames = c("TimeStep", "PreyAbundance", "PredatorAbundance"). Write this matrix to a csv in Lab05 working directory 
+myResults <- cbind("TimeStep"=time, "PreyAbundance"=n, "PredatorAbundance"=p)
+
+getwd()
+write.csv(myResults, file = "PredPreyResults.csv")
+
+# BONUS: Part 3. A parameter study 
+# Write code that efficiently creates multiple sets of results from the predator-prey model above. Your code should create 10 sets of results, one for each value of init prey in the following vector:
+initPreyVec <- seq(from = 10, to = 100, by = 10)
+
+# 1. Storing model as a function that takes predator abundance vector, prey abundance vector (both preallocated), and time 
+# 
+lv <- function(t, n, p) {
+    # t will be time 
+    # n and p will be abundance vectors 
+    for( i in 2:t ) {
+        n[i] <- n[i-1] + (r * n[i-1]) - (a * n[i-1] * p[i-1])
+        p[i] <- p[i-1] + (k * a * n[i-1] * p[i-1]) - (m * p[i-1])
+        if ( n[i] < 0 ) {
+            n[i] <- 0
+        } 
+        if( p[i] < 0 ) {
+            p[i] <- 0
+        }
+    }
+    results <- cbind("TimeStep"=seq(1:t), "PreyAbundance"=n, "PredatorAbundance"=p)
+    return(results)
+} 
+
+# Running a for loop to run through every initial prey value 
+# Making a big matrix to store these values 
+?lapply()
+lapply(initPreyVec, paste("init", initPreyVec))
+
+# Going to store each of these in 
+for ( i in 1:length(initPreyVec) ) {
+    results_label <- paste("results_init", initPreyVec[i], sep = "")
+    n <- c(initPreyVec[i], rep(0, totalGenerations-1))
+    results[[i]] <- lv(totalGenerations, n, p)
+}
