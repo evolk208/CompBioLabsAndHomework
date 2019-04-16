@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Zika virus, or ZIKV, became a worldwide epidemic of concern a few years ago. Importantly, Zika is transmitted through vectors: mosquitos of species __Aedes aegypti__, which can also carry and transmit yellow fever and dengue virus. Because of ZIKV's transmission through live __Aedes aegypti__ vectors, ZIKV transmission to human populations can be heavily influenced by environmental conditions, such as temperature range, humidity, proximity to still water, etc., as these conditions all influence the behavior of ZIKV-carrying mosquitos. 
+Zika virus, or ZIKV, became a worldwide epidemic of concern a few years ago. Importantly, Zika is transmitted through vectors: mosquitos of species _Aedes aegypti_, which can also carry and transmit yellow fever and dengue virus. Because of ZIKV's transmission through live _Aedes aegypti_ vectors, ZIKV transmission to human populations can be heavily influenced by environmental conditions, such as temperature range, humidity, proximity to still water, etc., as these conditions all influence the behavior of ZIKV-carrying mosquitos. 
 
 Mapping disease transmission in a spatiotemporal (regarding both space and time) manner, combined with spatiotemporal mapping of environmental factors, has become critical for effective understanding and mitigation of global epidemics. Importantly, during the Ebola outbreak of 2014-15, mathematical and statistical models using spatiotemporal data informed everything from medical resource allocation to locations of vaccine trials and proper interventions. ZIKV can benefit from similar mapping and visualization using spatial tools in R. 
 
 ### Driving question: 
 
-_How do I visualize environmental and Zika transmission data for 2015-16 Colombia in an insightful, interactive way?_ 
+__How do I visualize environmental and Zika transmission data for 2015-16 Colombia in an insightful, interactive way?__ 
 
 <hr>
 
@@ -70,6 +70,7 @@ This project will be my first experience with spatial statistics, and will prese
 ### Resources 
 
 General: [Spatial Analysis Lecture](https://soc.kuleuven.be/ceso/historischedemografie/resources/pdf/Spatial_analysis_CFaes_13012014.pdf)
+
 Specific lesson: [RSpatial.org](https://www.rspatial.org/intr/index.html)
 
 ### Goals/Order of analysis 
