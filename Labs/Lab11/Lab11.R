@@ -25,7 +25,7 @@ str(woodD)
 summary(woodD)
 names(woodD)
 
-# 3. Rename long desnity column name 
+# 3. Rename long desity column name 
 # Store just to be safe? 
 origDensityName <- colnames(woodD)[4]
 # Rename: 
@@ -93,8 +93,8 @@ byFamilySort <- arrange(byFamily, Wood.Density.mean)
 
 # 6c. Using your results from problem 6b:
 # What are the 8 families with the highest average densities?
-densestFamilies <- tail(byFamilySort, 8)
-densestFamilies
+denseFamilies <- tail(byFamilySort, 8)
+denseFamilies
 
 # What are the 8 families with the lowest average densities?
 leastDenseFamilies <- head(byFamilySort, 8)
@@ -110,3 +110,69 @@ library("ggplot2")
 # - You need to plot a subset of the data, corresponding to the species from the families with the highest or lowest densities, which is information you gained from problem 6.
 # - Hint for subsetting: if you have a vector of family names that you want to use as the criteria for subsetting, the %in% operator can be very helpful (check out line 108 of Sam's code for some of the Cusack et al. dataset problems for an example).
 
+# Subset the data 
+head(collapsedSpecies)
+
+# Goal: Want to subset out the species from the most and lease dense families
+library(tidyverse)
+
+# Subset the species from the 8 MOST DENSE families: 
+# collapsedSpecies$Family %in% denseFamilies$Family
+mostDenseSpecies <- subset(collapsedSpecies, collapsedSpecies$Family %in% denseFamilies$Family)
+
+# Check: 
+unique(mostDenseSpecies$Family)
+unique(mostDenseSpecies$Family) %in% denseFamilies$Family 
+# Checked! 
+
+# Subset the species from the 8 LEAST DENSE families: 
+leastDenseSpecies <- subset(collapsedSpecies, collapsedSpecies$Family %in% leastDenseFamilies$Family)
+
+# Check: 
+unique(leastDenseSpecies$Family)
+unique(leastDenseSpecies$Family) %in% leastDenseFamilies$Family 
+# Checked! 
+
+# Now that these are subsetted properly, plot (boxplots) by family 
+# 7.1 Boxplots of most dense families: 
+?ggplot()
+ggplot(data = mostDenseSpecies, 
+       mapping = aes(x = ))
+mostDense.boxplots <- ggplot(data = denseFamilies, 
+                             mapping = aes(x = ) )
+
+# Horizontal boxplots to better compare 
+names(leastDenseSpecies)
+leastDenseSpec.p <- ggplot(data = leastDenseSpecies, 
+aes(Family, Wood.Density.mean)) +
+labs(x = "Family", y = "Density (g/cm^3)", title = "Families with lowest average densities") 
+
+
+leastDenseSpec.p + geom_boxplot()
+leastDenseSpec.p + geom_boxplot() + coord_flip() 
+lds.H.boxplot <- leastDenseSpec.p + geom_boxplot() + coord_flip() 
+
+# Great! 
+
+mostDenseSpec.p <- ggplot(data = mostDenseSpecies, 
+aes(Family, Wood.Density.mean)) +
+labs(x = "Family", y = "Density (g/cm^3)", title = "Families with highest average densities")
+
+mostDenseSpec.p + geom_boxplot()
+mostDenseSpec.p + geom_boxplot() + coord_flip() 
+mds.H.boxplot <- mostDenseSpec.p + geom_boxplot() + coord_flip()
+
+# Plot together: 
+quartz()
+# Using gridExtra package for this 
+install.packages("gridExtra")
+library(gridExtra)
+
+horizontalBoxplots <- grid.arrange(mds.H.boxplot, lds.H.boxplot, nrow = 2)
+
+# Save plot: 
+quartz.save("horizontal-density-boxplots", type="png")
+# yay! 
+
+#### Vertical boxplots version for each family: 
+# Use facet_wrap() to divide up into individual plots by family 
