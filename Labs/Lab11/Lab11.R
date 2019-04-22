@@ -135,11 +135,6 @@ unique(leastDenseSpecies$Family) %in% leastDenseFamilies$Family
 
 # Now that these are subsetted properly, plot (boxplots) by family 
 # 7.1 Boxplots of most dense families: 
-?ggplot()
-ggplot(data = mostDenseSpecies, 
-       mapping = aes(x = ))
-mostDense.boxplots <- ggplot(data = denseFamilies, 
-                             mapping = aes(x = ) )
 
 # Horizontal boxplots to better compare 
 names(leastDenseSpecies)
@@ -175,4 +170,17 @@ quartz.save("horizontal-density-boxplots", type="png")
 # yay! 
 
 #### Vertical boxplots version for each family: 
-# Use facet_wrap() to divide up into individual plots by family 
+# Use facet_wrap() to divide up into individual plots by family
+?facet_wrap
+
+leastDenseSpec.p + facet_wrap( ~ Family, ncol=4, scale="free_x")  + geom_boxplot() + theme(axis.text.x= element_blank())
+# NICE, FINALLY 
+
+# Saving this plot too:
+quartz.save("facetted-least-dense-families", type="png")
+
+# Most dense, facetted: 
+mostDenseSpec.p + facet_wrap( ~ Family, ncol=4, scale="free_x")  + geom_boxplot() + theme(axis.text.x= element_blank())
+
+# Saving this plot too:
+quartz.save("facetted-most-dense-families", type="png")
