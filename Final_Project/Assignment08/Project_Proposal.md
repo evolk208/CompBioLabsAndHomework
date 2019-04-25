@@ -71,7 +71,7 @@ This project will be my first experience with spatial statistics, and will prese
 
 General: [Spatial Analysis Lecture](https://soc.kuleuven.be/ceso/historischedemografie/resources/pdf/Spatial_analysis_CFaes_13012014.pdf)
 
-Specific lesson: [RSpatial.org](https://www.rspatial.org/intr/index.html)
+Specific lesson: [RSpatial.org](https://www.rspatial.org/index.html)
 
 ### Goals/Order of analysis 
 
