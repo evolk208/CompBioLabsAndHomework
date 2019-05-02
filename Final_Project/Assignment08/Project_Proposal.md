@@ -52,7 +52,7 @@ Data is in two formats:
 
 #### Size of data (i.e., megabytes, lines, etc.)
 
-Data varies from 15 MB to ~1 KB. Data files are large. Particular sizes can be found next to the associated data on the repository: [https://datadryad.org/resource/doi:10.5061/dryad.83nj1.1](https://datadryad.org/resource/doi:10.5061/dryad.83nj1.1)
+Data varies from 15 MB to ~1 KB. Data files are large. Particular sizes can be found next to the associated data on the repository: [https://datadryad.org/resource/doi:10.5061/dryad.83nj1.2](https://datadryad.org/resource/doi:10.5061/dryad.83nj1.2)
 
 #### Any inconsistencies in the data files?  Anything that looks problematic?  
 
