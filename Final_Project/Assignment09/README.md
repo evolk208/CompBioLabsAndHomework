@@ -105,7 +105,7 @@ Overall, I feel great about how this project came together. I learned a lot abou
 
 My project was a visualization project, and sought to provide insightful visual data projects for future analysis. My code produces 38 combined plots of Zika vector (Aedes aegypti) and environmental data for Colombia--one for each week. In sum, these visualizations span the first through 38th weeks (January 1st through October 25th) of 2016 , the year for which the Zika incidence data for Colombia has greatest fidelity due to national recording efforts. I hope these plots, arranged and colored as I have chosen to visualize them, can provide a comprehensive and easily associated visual to assist in identifying patterns to guide spatial epidemiological inference using this dataset, and others. Overall, Colombia's Zika transmission and consolidated environmental dataset that this repository consolidates presents one of the most comprehensive case studies for examining a recent pandemic: Zika virus. Analysis presented here can additionally guide future work on pairing vector population and environmental data in accessible and insightful study of international pandemics. 
 
-![First plot: plot of Aedes aegypti population and environmental factors for week one of 2019](https://github.com/evolk208/CompBioLabsAndHomework/blob/master/Final_Project/Assignment09/plots/plot-1.pdf)
+![First plot: plot of Aedes aegypti population and environmental factors for week one of 2019](https://github.com/evolk208/CompBioLabsAndHomework/blob/master/Final_Project/Assignment09/plot-1.png)
 
 ## References 
 
