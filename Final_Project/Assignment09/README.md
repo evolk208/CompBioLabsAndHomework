@@ -97,7 +97,7 @@ Since I could not quite figure out how to attach the parameters in the .CSV file
 
 For my visualizations, I plotted a panel of four raster plots for every week of 2016 in which all of these variables had been recorded and provided. My visualizations span 38 weeks, from January 1st to October 25, 2016. The week is labeled in the title of the bottom right raster panel. I tried to match coloration of all of my plots to the most intuitive representation for each of the parameters shown. Through creating these visualizations, I hope to provide a fully reproducible way to generate insightful visualizations to guide pattern recognition and subsequent spatial analysis of variables relevant to Zika transmission in Colombia for 2016, and beyond.
 
-#### Generate all of my plots using my code in a fully reproducible analysis, found as ["final_analysis.R"]()!
+#### Generate all of my plots using my code in a fully reproducible analysis, found in this folder as ["final_analysis.R"](https://github.com/evolk208/CompBioLabsAndHomework/blob/master/Final_Project/Assignment09/final-analysis.R)!
 
 ### Results and conclusions
 
