@@ -97,7 +97,7 @@ Since I could not quite figure out how to attach the parameters in the .CSV file
 
 For my visualizations, I plotted a panel of four raster plots for every week of 2016 in which all of these variables had been recorded and provided. My visualizations span 38 weeks, from January 1st to October 25, 2016. The week is labeled in the title of the bottom right raster panel. I tried to match coloration of all of my plots to the most intuitive representation for each of the parameters shown. Through creating these visualizations, I hope to provide a fully reproducible way to generate insightful visualizations to guide pattern recognition and subsequent spatial analysis of variables relevant to Zika transmission in Colombia for 2016, and beyond.
 
-#### Generate all of my plots using my code in a fully reproducible analysis, found in this folder as ["final_analysis.R"](https://github.com/evolk208/CompBioLabsAndHomework/blob/master/Final_Project/Assignment09/final-analysis.R)!
+### Generate all of my plots using my code in a fully reproducible analysis, found in this folder as ["final_analysis.R"](https://github.com/evolk208/CompBioLabsAndHomework/blob/master/Final_Project/Assignment09/final-analysis.R)!
 
 ### Results and conclusions
 
@@ -105,7 +105,7 @@ Overall, I feel great about how this project came together. I learned a lot abou
 
 My project was a visualization project, and sought to provide insightful visual data projects for future analysis. My code produces 38 combined plots of Zika vector (Aedes aegypti) and environmental data for Colombia--one for each week. In sum, these visualizations span the first through 38th weeks (January 1st through October 25th) of 2016 , the year for which the Zika incidence data for Colombia has greatest fidelity due to national recording efforts. I hope these plots, arranged and colored as I have chosen to visualize them, can provide a comprehensive and easily associated visual to assist in identifying patterns to guide spatial epidemiological inference using this dataset, and others. Overall, Colombia's Zika transmission and consolidated environmental dataset that this repository consolidates presents one of the most comprehensive case studies for examining a recent pandemic: Zika virus. Analysis presented here can additionally guide future work on pairing vector population and environmental data in accessible and insightful study of international pandemics. 
 
-[ VISUAL ] 
+![First plot: plot of Aedes aegypti population and environmental factors for week one of 2019](Final_Project/Assignment09/plot-1.png)
 
 ## References 
 
