@@ -129,6 +129,8 @@ library(RColorBrewer)
 
 # plot(raster(aed_file, band=1), col= terrain.colors(8)) # looks fine 
 
+
+#### ===== ONE DRAFT PLOT ============
 ## Organize draft-final plots (not including overlay yet) 
 # Set dimensions: 
 par(mfrow=c(2,2), mai = c(.01, 0.4, 0.4, 2), bty="n")
@@ -161,7 +163,8 @@ plot(raster(relhum_file, band=indices.16[1]), axes = FALSE, col=brewer.pal(8, "R
 
 # For loop! 
 length(indices.16)
-for( i in 1:2 ) {
+for( i in 1:length(indices.16) ) {
+	dev.new(width=9, height=6, unit = "in")
 	par(mfrow=c(2,2), mai = c(.01, 0.4, 0.4, 2), bty="n")
 	# Note: i will go 1:39!! 
 	plot.name <- paste("plot-", i, ".pdf", sep="")
@@ -187,6 +190,6 @@ for( i in 1:2 ) {
 	
 	# Saving plot
 	quartz.save(plot.name, type="pdf")
+	dev.off()
 }
-
 
